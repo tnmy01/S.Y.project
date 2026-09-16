@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Campus - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="brand">
+      <div class="brand-icon">SC</div>
+      <div>
+        <h1>Smart Campus</h1>
+        <p>Lost & Found Management System</p>
+      </div>
+    </div>
+
+    <div class="auth-content">
+      <h2>Welcome Back</h2>
+      <p class="muted">Login to manage your lost and found reports.</p>
+
+      <form id="loginForm">
+        <label for="email">College Email</label>
+        <input id="email" type="email" placeholder="you@college.edu" required>
+
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input id="password" type="password" placeholder="Enter your password" required>
+          <button type="button" class="show-btn" onclick="togglePassword()">Show</button>
+        </div>
+
+        <div class="form-row">
+          <label class="remember"><input type="checkbox"> Remember me</label>
+          <a href="#" onclick="return false;">Forgot password?</a>
+        </div>
+
+        <button class="primary-btn" type="submit">Login</button>
+      </form>
+
+      <p id="loginMessage" class="message"></p>
+      <p class="signup-text">New to Smart Campus? <a href="#" onclick="return false;">Create an account</a></p>
+    </div>
+
+    <footer>For students, teachers and authorized college staff</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

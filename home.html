@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Campus - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  <header class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon small">SC</div>
+      <div>
+        <strong>Smart Campus</strong>
+        <span>Lost & Found</span>
+      </div>
+    </div>
+    <nav>
+      <a class="active" href="home.html">Home</a>
+      <a href="#report">Report Item</a>
+      <a href="#search">Search</a>
+      <a href="#claims">My Claims</a>
+    </nav>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">CAMPUS RESOURCE MANAGEMENT</span>
+        <h1>Find what you've lost.<br><span>Return what you've found.</span></h1>
+        <p>A simple digital platform for reporting, searching, matching and recovering belongings across your campus.</p>
+        <div class="hero-actions">
+          <a class="primary-btn inline" href="#report">Report an Item</a>
+          <a class="secondary-btn" href="#search">Search Lost & Found</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <span>Quick Overview</span>
+          <span class="live-dot">● Live</span>
+        </div>
+        <div class="overview-grid">
+          <div><strong>24</strong><span>Lost Reports</span></div>
+          <div><strong>17</strong><span>Found Items</span></div>
+          <div><strong>9</strong><span>Returned</span></div>
+          <div><strong>5</strong><span>Pending Claims</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="report">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">GET STARTED</span>
+          <h2>What would you like to do?</h2>
+        </div>
+      </div>
+      <div class="action-grid">
+        <a class="action-card" href="#" onclick="demoAction('Lost item reporting'); return false;">
+          <div class="action-icon">⌕</div>
+          <h3>Report Lost Item</h3>
+          <p>Add item name, category, description, location and date to create a lost report.</p>
+          <span>Report lost item →</span>
+        </a>
+        <a class="action-card" href="#" onclick="demoAction('Found item reporting'); return false;">
+          <div class="action-icon">✓</div>
+          <h3>Report Found Item</h3>
+          <p>Tell the campus community about an item you found so its owner can locate it.</p>
+          <span>Report found item →</span>
+        </a>
+        <a class="action-card" href="#search">
+          <div class="action-icon">⌕</div>
+          <h3>Search Items</h3>
+          <p>Search and filter reports by category, location, date and status.</p>
+          <span>Search reports →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section search-section" id="search">
+      <div class="search-box">
+        <div>
+          <span class="eyebrow">SEARCH</span>
+          <h2>Looking for something?</h2>
+          <p>Try an item name such as “ID card”, “calculator” or “black bag”.</p>
+        </div>
+        <div class="search-controls">
+          <input id="searchInput" type="search" placeholder="Search lost & found items...">
+          <select id="category">
+            <option value="">All categories</option>
+            <option>Identity Card</option>
+            <option>Books</option>
+            <option>Electronics</option>
+            <option>Bags</option>
+            <option>Other</option>
+          </select>
+          <button class="primary-btn" onclick="searchItems()">Search</button>
+        </div>
+      </div>
+      <div id="searchResult" class="result-message"></div>
+    </section>
+
+    <section class="section" id="claims">
+      <div class="info-panel">
+        <div>
+          <span class="eyebrow">SMART MATCHING</span>
+          <h2>Possible matches, all in one place.</h2>
+          <p>The project can compare item name, category, description and location to suggest possible matches between lost and found reports.</p>
+        </div>
+        <div class="match-example">
+          <div><span>Lost</span><strong>Black Calculator</strong><small>Room 204 • Today</small></div>
+          <div class="match-arrow">↔</div>
+          <div><span>Possible Match</span><strong>Black Scientific Calculator</strong><small>Lab 2 • Today</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong>Smart Campus Resource & Lost-and-Found Management System</strong>
+    <span>Mini Project • B.Sc. Computer Science</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
